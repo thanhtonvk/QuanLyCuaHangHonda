@@ -1,0 +1,16 @@
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.exe
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.deps.json
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.runtimeconfig.json
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.runtimeconfig.dev.json
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.dll
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\ref\QuanLyCuaHangHonda.dll
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\bin\Debug\net5.0\QuanLyCuaHangHonda.pdb
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.csproj.AssemblyReference.cache
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.AssemblyInfoInputs.cache
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.AssemblyInfo.cs
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.csproj.CoreCompileInputs.cache
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.dll
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\ref\QuanLyCuaHangHonda.dll
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.pdb
+C:\Users\thanh\source\repos\QuanLyCuaHangHonda\QuanLyCuaHangHonda\obj\Debug\net5.0\QuanLyCuaHangHonda.genruntimeconfig.cache
