@@ -8,9 +8,10 @@ namespace QuanLyCuaHangHonda.Entities
 {
     class ChiTietHDB
     {
-        private string macthd, mahd, masp, soluong;
+        private string macthd, mahd, masp;
+        private int soluong;
 
-        public ChiTietHDB(string macthd, string mahd, string masp, string soluong)
+        public ChiTietHDB(string macthd, string mahd, string masp, int soluong)
         {
             this.macthd = macthd;
             this.mahd = mahd;
@@ -21,10 +22,13 @@ namespace QuanLyCuaHangHonda.Entities
         {
 
         }
-
+        public string ToString()
+        {
+            return macthd + "#" + mahd + "#" + masp + "#" + soluong;
+        }
         public string Macthd { get => macthd; set => macthd = value; }
         public string Mahd { get => mahd; set => mahd = value; }
         public string Masp { get => masp; set => masp = value; }
-        public string Soluong { get => soluong; set => soluong = value; }
+        public int Soluong { get => soluong; set => soluong = value; }
     }
 }

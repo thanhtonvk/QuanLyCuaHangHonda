@@ -7,9 +7,10 @@ namespace QuanLyCuaHangHonda
     {
         static void Main(string[] args)
         {
-            KhachHang kh = new KhachHang();
-            kh.Hoten = "Hương Lan";
-            Console.WriteLine(kh);
+            string so = Console.ReadLine();
+            int a = int.Parse(so);
+
+
         }
     }
 }

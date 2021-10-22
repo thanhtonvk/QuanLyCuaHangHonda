@@ -23,9 +23,9 @@ namespace QuanLyCuaHangHonda.Entities
 
         }
         override
-            public  string ToString()
+        public string ToString()
         {
-            return hoten;
+            return makh + "#" + hoten + "#" + ngaysinh + "#" + diachi + "#" + sdt;
         }
         public string Makh { get => makh; set => makh = value; }
         public string Hoten { get => hoten; set => hoten = value; }
