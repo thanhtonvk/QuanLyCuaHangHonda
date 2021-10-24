@@ -15,7 +15,7 @@ namespace QuanLyCuaHangHonda.GUI
             Console.WriteLine("                            ║                        QUẢN LÝ KHÁCH HÀNG                     ║");
             Console.WriteLine("                            ║═══════════════════════════════════════════════════════════════║");
             Console.WriteLine("                            ║                        1. THÊM KHÁCH HÀNG                     ║");
-            Console.WriteLine("                            ║                        2. HIỂN THỊ DANH SÁCH NV               ║");
+            Console.WriteLine("                            ║                        2. HIỂN THỊ DANH SÁCH KH               ║");
             Console.WriteLine("                            ║                        3. TÌM KIẾM                            ║");
             Console.WriteLine("                            ║                        4. CẬP NHẬT THÔNG TIN                  ║");
             Console.WriteLine("                            ║                        5. XÓA KHÁCH HÀNG                      ║");
