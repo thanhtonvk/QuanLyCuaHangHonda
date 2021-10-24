@@ -14,7 +14,7 @@ namespace QuanLyCuaHangHonda.DAL
         string path = "NhanVien.txt";
         public List<NhanVien> LayDSNhanVien()
         {
-            List<NhanVien> sanPhamList = new List<NhanVien>();
+            List<NhanVien> nhanVienList = new List<NhanVien>();
             if (File.Exists(path))
             {
                 StreamReader streamReader = new StreamReader(path);
@@ -23,16 +23,16 @@ namespace QuanLyCuaHangHonda.DAL
                 {
                     string[] arr = line.Split("#");
                     NhanVien nhanVien = new NhanVien(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5],arr[6],arr[7]);
-                    sanPhamList.Add(nhanVien);
+                    nhanVienList.Add(nhanVien);
                 }
                 streamReader.Close();
             }
-            return sanPhamList;
+            return nhanVienList;
         }
-        public void GhiFile(List<NhanVien> sanPhamList)
+        public void GhiFile(List<NhanVien> nhanVienList)
         {
             StreamWriter streamWriter = new StreamWriter(path);
-            foreach (NhanVien nhanVien in sanPhamList)
+            foreach (NhanVien nhanVien in nhanVienList)
             {
                 streamWriter.WriteLine(nhanVien.ToString());
             }

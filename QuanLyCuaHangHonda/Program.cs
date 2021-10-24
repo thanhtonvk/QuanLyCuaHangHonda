@@ -1,4 +1,6 @@
-﻿using QuanLyCuaHangHonda.Entities;
+﻿using QuanLyCuaHangHonda.BLL;
+using QuanLyCuaHangHonda.Entities;
+using QuanLyCuaHangHonda.GUI;
 using System;
 
 namespace QuanLyCuaHangHonda
@@ -7,9 +9,10 @@ namespace QuanLyCuaHangHonda
     {
         static void Main(string[] args)
         {
-            string so = Console.ReadLine();
-            int a = int.Parse(so);
-
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            QuanLyKhachHang qlkh = new QuanLyKhachHang();
+            qlkh.Run();
 
         }
     }
