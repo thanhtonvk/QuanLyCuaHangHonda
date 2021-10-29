@@ -16,12 +16,13 @@ namespace QuanLyCuaHangHonda.DAL
             List<SanPham> sanPhamList = new List<SanPham>();
             if (File.Exists(path))
             {
+                //mở luồng đọc file
                 StreamReader streamReader = new StreamReader(path);
                 string line;
                 while ((line = streamReader.ReadLine()) != null)
                 {
                     string[] arr = line.Split("#");
-                    SanPham sanPham = new SanPham(arr[0], arr[1], arr[2], arr[3], int.Parse(arr[4]),int.Parse(arr[5]));
+                    SanPham sanPham = new SanPham(arr[0], arr[1], arr[2], arr[3], int.Parse(arr[4]), int.Parse(arr[5]), int.Parse(arr[6]));
                     sanPhamList.Add(sanPham);
                 }
                 streamReader.Close();

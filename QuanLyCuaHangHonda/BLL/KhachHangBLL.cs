@@ -39,6 +39,7 @@ namespace QuanLyCuaHangHonda.BLL
         }
         public void HienDSKhachHang()
         {
+            Console.Clear();
             Console.WriteLine("|{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}|{5,-20}|", "STT", "Mã khách hàng", "Họ tên", "Ngày sinh", "Địa chỉ", "SĐT");
             foreach (KhachHang khachHang in khachHangList)
             {
@@ -49,6 +50,7 @@ namespace QuanLyCuaHangHonda.BLL
         {
             while (true)
             {
+                Console.Clear();
                 KhachHang khachHang = NhapKhachHang();
                 khachHangList.Add(khachHang);
                 khachHangDAL.GhiFile(khachHangList);
@@ -59,34 +61,49 @@ namespace QuanLyCuaHangHonda.BLL
         }
         public void CapNhatKhachHang()
         {
+            Console.Clear();
+            //hiển toàn bộ thông tin khách hàng
             HienDSKhachHang();
+            //chọn khách hàng cần sửa theo STT
             Console.Write("Chọn: ");
             int chon = int.Parse(Console.ReadLine());
-            KhachHang khachHang = khachHangList[chon];
-            Console.WriteLine("Nhập họ tên: ");
-            khachHang.Hoten = Console.ReadLine();
-            Console.WriteLine("Nhập ngày sinh: ");
-            khachHang.Ngaysinh = Console.ReadLine();
-            Console.WriteLine("Nhập địa chỉ: ");
-            khachHang.Diachi = Console.ReadLine();
-            Console.WriteLine("Nhập SĐT: ");
-            khachHang.Sdt = Console.ReadLine();
-            khachHangList[chon] = khachHang;
-            Console.WriteLine("Cập nhật thành công");
-            khachHangDAL.GhiFile(khachHangList);
+            if (chon > -1 && chon < khachHangList.Count)
+            {
+                //nhập lại thông tin khách hàng
+                KhachHang khachHang = khachHangList[chon];
+                Console.WriteLine("Nhập họ tên: ");
+                khachHang.Hoten = Console.ReadLine();
+                Console.WriteLine("Nhập ngày sinh: ");
+                khachHang.Ngaysinh = Console.ReadLine();
+                Console.WriteLine("Nhập địa chỉ: ");
+                khachHang.Diachi = Console.ReadLine();
+                Console.WriteLine("Nhập SĐT: ");
+                khachHang.Sdt = Console.ReadLine();
+                //gán lại khách hàng tại vị trí đã chọn bằng thông tin vừa nhập lại
+                khachHangList[chon] = khachHang;
+                Console.WriteLine("Cập nhật thành công");
+                //ghi lại file
+                khachHangDAL.GhiFile(khachHangList);
+            }
+
         }
         public void XoaThongTin()
         {
-
+            Console.Clear();
             HienDSKhachHang();
             Console.Write("Chọn: ");
             int chon = int.Parse(Console.ReadLine());
-            khachHangList.RemoveAt(chon);
-            Console.WriteLine("Xóa thành công");
-            khachHangDAL.GhiFile(khachHangList);
+            if (chon > -1 && chon < khachHangList.Count)
+            {
+
+                khachHangList.RemoveAt(chon);
+                Console.WriteLine("Xóa thành công");
+                khachHangDAL.GhiFile(khachHangList);
+            }
         }
         public void timKhachHang()
         {
+            Console.Clear();
             Console.Write("Nhập từ khóa cần tìm: ");
             string tukhoa = Console.ReadLine();
             int dem = 0;

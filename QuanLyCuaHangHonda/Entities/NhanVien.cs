@@ -8,7 +8,7 @@ namespace QuanLyCuaHangHonda.Entities
 {
     class NhanVien
     {
-        private string manv, hoten, ngaysinh, diachi, sdt, gioitinh, luong,chucvu;
+        private string manv, hoten, ngaysinh, diachi, sdt, gioitinh, luong, chucvu;
 
         public NhanVien()
         {
@@ -28,7 +28,7 @@ namespace QuanLyCuaHangHonda.Entities
         override
         public string ToString()
         {
-            return manv + "#" + hoten + "#" + ngaysinh + "#" + diachi + "#" + sdt + "#" + gioitinh + "#" + chucvu;
+            return manv + "#" + hoten + "#" + ngaysinh + "#" + diachi + "#" + sdt + "#" + gioitinh + "#" + luong + "#" + chucvu;
         }
         public string Manv { get => manv; set => manv = value; }
         public string Hoten { get => hoten; set => hoten = value; }

@@ -11,8 +11,6 @@ namespace QuanLyCuaHangHonda
         {
             Console.InputEncoding = System.Text.Encoding.Unicode;
             Console.OutputEncoding = System.Text.Encoding.Unicode;
-            QuanLyKhachHang qlkh = new QuanLyKhachHang();
-            qlkh.Run();
 
         }
     }

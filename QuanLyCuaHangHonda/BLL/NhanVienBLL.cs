@@ -10,7 +10,7 @@ namespace QuanLyCuaHangHonda.BLL
 {
     class NhanVienBLL
     {
-        List<NhanVien> nhanVienList;
+        public List<NhanVien> nhanVienList;
         NhanVienDAL nhanVienDAL;
         Random random;
         public NhanVienBLL()
@@ -46,6 +46,7 @@ namespace QuanLyCuaHangHonda.BLL
         }
         public void HienDSNhanVien()
         {
+            Console.Clear();
             Console.WriteLine("|{0,-20}|{1,-20}|{2,-20}|{3,-20}|{4,-20}|{5,-20}|{6,-20}|{7,-20}|{8,-20}|", "STT", "Mã nhân viên", "Họ tên", "Ngày sinh", "Địa chỉ", "SĐT", "Giới tính", "Lương", "Chức vụ");
             foreach (NhanVien nhanVien in nhanVienList)
             {
@@ -56,6 +57,7 @@ namespace QuanLyCuaHangHonda.BLL
         {
             while (true)
             {
+                Console.Clear();
                 NhanVien nhanVien = NhapNhanVien();
                 nhanVienList.Add(nhanVien);
                 nhanVienDAL.GhiFile(nhanVienList);
@@ -66,40 +68,51 @@ namespace QuanLyCuaHangHonda.BLL
         }
         public void CapNhatNhanVien()
         {
+            Console.Clear();
             HienDSNhanVien();
             Console.Write("Chọn: ");
             int chon = int.Parse(Console.ReadLine());
-            NhanVien nhanVien = nhanVienList[chon];
-            Console.WriteLine("Nhập họ tên: ");
-            nhanVien.Hoten = Console.ReadLine();
-            Console.WriteLine("Nhập ngày sinh: ");
-            nhanVien.Ngaysinh = Console.ReadLine();
-            Console.WriteLine("Nhập địa chỉ: ");
-            nhanVien.Diachi = Console.ReadLine();
-            Console.WriteLine("Nhập SĐT: ");
-            nhanVien.Sdt = Console.ReadLine();
-            Console.WriteLine("Nhập giới tính: ");
-            nhanVien.Gioitinh = Console.ReadLine();
-            Console.WriteLine("Nhập lương: ");
-            nhanVien.Luong = Console.ReadLine();
-            Console.WriteLine("Nhập chức vụ: ");
-            nhanVien.Chucvu = Console.ReadLine();
-            nhanVienList[chon] = nhanVien;
-            Console.WriteLine("Cập nhật thành công");
-            nhanVienDAL.GhiFile(nhanVienList);
+            if (chon > -1 && chon < nhanVienList.Count)
+            {
+                NhanVien nhanVien = nhanVienList[chon];
+                Console.WriteLine("Nhập họ tên: ");
+                nhanVien.Hoten = Console.ReadLine();
+                Console.WriteLine("Nhập ngày sinh: ");
+                nhanVien.Ngaysinh = Console.ReadLine();
+                Console.WriteLine("Nhập địa chỉ: ");
+                nhanVien.Diachi = Console.ReadLine();
+                Console.WriteLine("Nhập SĐT: ");
+                nhanVien.Sdt = Console.ReadLine();
+                Console.WriteLine("Nhập giới tính: ");
+                nhanVien.Gioitinh = Console.ReadLine();
+                Console.WriteLine("Nhập lương: ");
+                nhanVien.Luong = Console.ReadLine();
+                Console.WriteLine("Nhập chức vụ: ");
+                nhanVien.Chucvu = Console.ReadLine();
+                nhanVienList[chon] = nhanVien;
+                Console.WriteLine("Cập nhật thành công");
+                nhanVienDAL.GhiFile(nhanVienList);
+            }
+
         }
         public void XoaThongTin()
         {
+            Console.Clear();
 
             HienDSNhanVien();
             Console.Write("Chọn: ");
             int chon = int.Parse(Console.ReadLine());
-            nhanVienList.RemoveAt(chon);
-            Console.WriteLine("Xóa thành công");
-            nhanVienDAL.GhiFile(nhanVienList);
+            if (chon > -1 && chon < nhanVienList.Count)
+            {
+                nhanVienList.RemoveAt(chon);
+                Console.WriteLine("Xóa thành công");
+                nhanVienDAL.GhiFile(nhanVienList);
+            }
+
         }
         public void timNhanVien()
         {
+            Console.Clear();
             Console.Write("Nhập từ khóa cần tìm: ");
             string tukhoa = Console.ReadLine();
             int dem = 0;
@@ -121,7 +134,7 @@ namespace QuanLyCuaHangHonda.BLL
         public NhanVien nhanVien(string manv)
         {
             NhanVien kq = null;
-            foreach(NhanVien nhanVien in nhanVienList)
+            foreach (NhanVien nhanVien in nhanVienList)
             {
                 if (nhanVien.Manv.Equals(manv)) kq = nhanVien;
             }
