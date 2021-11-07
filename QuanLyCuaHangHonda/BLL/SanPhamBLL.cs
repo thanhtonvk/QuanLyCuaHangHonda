@@ -94,23 +94,54 @@ namespace QuanLyCuaHangHonda.BLL
                 index++;
             }
         }
+        public void TimKiem()
+        {
+            Console.Clear();
+            Console.Write("Nhập từ khóa: ");
+            string tukhoa = Console.ReadLine();
+            int index = 0;
+            foreach (SanPham sanPham in sanPhamList)
+            {
+                if (sanPham.Masp.Contains(tukhoa) ||
+                    sanPham.Tensp.Contains(tukhoa) ||
+                    sanPham.Mausac.Contains(tukhoa))
+                {
+                    HienSanPham(sanPham, index);
+                    index++;
+                }
+            }
+        }
         public void UpdateSoLuong(int soluong, string masp)
         {
             SanPham sp = new SanPham();
             int index = 0;
+            bool check = false;
             foreach (SanPham sanPham in sanPhamList)
             {
                 if (sanPham.Masp.Equals(masp))
                 {
+                    check = true;
                     break;
                 }
                 index++;
             }
-            sp = sanPhamList[index];
-            sp.Soluong += soluong;
-            sanPhamList[index] = sp;
-            sanPhamDAL.GhiFile(sanPhamList);
+            if (check)
+            {
+                sp = sanPhamList[index];
+                sp.Soluong += soluong;
+                sanPhamList[index] = sp;
+                sanPhamDAL.GhiFile(sanPhamList);
+            }
 
+        }
+        public SanPham sanPham(string masp)
+        {
+            SanPham kq = new SanPham();
+            foreach (SanPham sp in sanPhamDAL.LayDSSanPham())
+            {
+                if (sp.Masp.Equals(masp)) kq = sp;
+            }
+            return kq;
         }
     }
 }

@@ -31,6 +31,9 @@ namespace QuanLyCuaHangHonda.BLL
             chiTietHDN.Soluong = int.Parse(Console.ReadLine());
             Console.WriteLine("Đơn giá: ");
             chiTietHDN.Dongia = int.Parse(Console.ReadLine());
+
+            SanPhamBLL sanPhamBLL = new SanPhamBLL();
+            sanPhamBLL.UpdateSoLuong(chiTietHDN.Soluong, chiTietHDN.Masp);
             return chiTietHDN;
         }
 
