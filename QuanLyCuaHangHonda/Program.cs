@@ -17,7 +17,7 @@ namespace QuanLyCuaHangHonda
             Console.WriteLine("                            ║                        3. QUẢN LÝ NHÂN VIÊN                   ║");
             Console.WriteLine("                            ║                        4. NHẬP XE                             ║");
             Console.WriteLine("                            ║                        5. BÁN XE                              ║");
-            Console.WriteLine("                            ║                        5. THỐNG KÊ                            ║");
+            Console.WriteLine("                            ║                        6. THỐNG KÊ                            ║");
             Console.WriteLine("                            ║                        0. THOÁT                               ║");
             Console.WriteLine("                            ╚═══════════════════════════════════════════════════════════════╝");
         }
